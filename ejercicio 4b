@@ -1,0 +1,33 @@
+package com.mycompany.meodio;
+import java.util.Scanner;
+/**
+ *
+ * @author LA FE
+ */
+public class MeOdio {
+        public static void main(String[] args) {
+        // Ingreso de coordenadas del punto A
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingrese la coordenada x del punto A: ");
+        double xA = sc.nextDouble();
+        System.out.print("Ingrese la coordenada y del punto A: ");
+        double yA = sc.nextDouble();
+        System.out.print("Ingrese la coordenada z del punto A: ");
+        double zA = sc.nextDouble();
+
+
+        // Ingreso de coordenadas del punto B
+        System.out.print("Ingrese la coordenada x del punto B: ");
+        double xB = sc.nextDouble();
+        System.out.print("Ingrese la coordenada y del punto B: ");
+        double yB = sc.nextDouble();
+        System.out.print("Ingrese la coordenada z del punto B: ");
+        double zB = sc.nextDouble();
+
+        // Cálculo de la distancia
+        double distancia = Math.sqrt(Math.pow(xB - xA, 2) + Math.pow(yB - yA, 2)+ Math.pow(zB - zA, 2));
+
+        // Impresión del resultado
+        System.out.println("La distancia entre los puntos A y B es: " + distancia);
+    }
+}
