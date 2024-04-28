@@ -1,0 +1,26 @@
+package com.mycompany.meodio;
+import java.util.Scanner;
+import java.math.BigDecimal;
+import java.math.MathContext;
+/**
+ *
+ * @author LA FE
+ */
+public class MeOdio {
+    public static void main(String[]args){
+     //Ingreso del radio
+     Scanner sc= new Scanner (System.in);
+        System.out.print("Ingrese el radio del circulo:");
+        double radio = sc.nextDouble();
+        
+     //Calculo del area
+     BigDecimal area  = new BigDecimal(Math.PI).multiply(new BigDecimal(radio).pow(2));
+     area= area.round(MathContext.DECIMAL32);
+     
+     //Impresion del resultado
+        System.out.println("El area del circulo es: "+ area.doubleValue());
+        
+        
+    }
+   
+}
