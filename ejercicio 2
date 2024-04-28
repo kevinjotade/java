@@ -1,0 +1,32 @@
+public class Tarea {
+
+    public static void main(String[] args) {
+        // Definición de las variables
+        double r1 = 4.0;
+        double r2 = 2.0;
+        double h1 = 2.5;
+        double h2 = 5.0;
+
+        // Cálculo del área lateral del cilindro 1
+        double areaLateral1 = 2 * Math.PI * r1 * h1;
+
+        // Cálculo del área de la base del cilindro 1
+        double areaBase1 = Math.PI * r1 * r1;
+
+        // Cálculo del área total del cilindro 1
+        double areaTotal1 = areaLateral1 + 2 * areaBase1;
+
+        // Cálculo del área lateral del cilindro 2
+        double areaLateral2 = 2 * Math.PI * r2 * h2;
+
+        // Cálculo del área de la base del cilindro 2
+        double areaBase2 = Math.PI * r2 * r2;
+
+        // Cálculo del área total del cilindro 2
+        double areaTotal2 = areaLateral2 + 2 * areaBase2;
+
+        // Impresión de los resultados
+        System.out.println("Área total del cilindro 1: " + areaTotal1 + " m²");
+        System.out.println("Área total del cilindro 2: " + areaTotal2 + " m²");
+    }
+}
