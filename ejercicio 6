@@ -1,0 +1,48 @@
+package com.mycompany.meodio;
+import java.util.Random;
+/**
+ *
+ * @author LA FE
+ */
+public class MeOdio {
+    public static void main(String[] args) {
+        // Generación de números aleatorios
+        Random random = new Random();
+        int[] numeros = new int[4];
+
+        for (int i = 0; i < numeros.length; i++) {
+            numeros[i] = random.nextInt(101); // Generar entre 0 y 100 (inclusive)
+        }
+
+        // Mostrar los números generados
+        System.out.println("Números aleatorios:");
+        for (int numero : numeros) {
+            System.out.print(numero + " ");
+        }
+
+        // Cálculo del promedio
+        int suma = 0;
+        for (int numero : numeros) {
+            suma += numero;
+        }
+        double promedio = (double) suma / numeros.length;
+
+        // Cálculo del mínimo y máximo
+        int minimo = numeros[0];
+        int maximo = numeros[0];
+        for (int i = 1; i < numeros.length; i++) {
+            if (numeros[i] < minimo) {
+                minimo = numeros[i];
+            }
+            if (numeros[i] > maximo) {
+                maximo = numeros[i];
+            }
+        }
+
+        // Mostrar resultados
+        System.out.println("\nPromedio: " + promedio);
+        System.out.println("Mínimo: " + minimo);
+        System.out.println("Máximo: " + maximo);
+    }
+}
+
