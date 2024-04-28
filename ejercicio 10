@@ -1,0 +1,22 @@
+package com.mycompany.meodio;
+import java.util.Scanner;
+import java.math.BigDecimal;
+import java.math.MathContext;
+/**
+ *
+ * @author LA FE
+ */
+public class MeOdio {
+    public static void main(String[] args) {
+        // Ingreso del radio
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingrese el radio de la esfera: ");
+        double radio = sc.nextDouble();
+
+        // Cálculo del volumen
+        BigDecimal volumen = new BigDecimal((4.0 / 3.0) * Math.PI).multiply(new BigDecimal(radio).pow(3));
+        volumen = volumen.round(MathContext.DECIMAL32); 
+        // Impresión del resultado
+        System.out.println("El volumen de la esfera es: " + volumen.doubleValue());
+    }
+}
