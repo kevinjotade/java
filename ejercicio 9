@@ -1,0 +1,30 @@
+package com.mycompany.tarea;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author LA FE
+ */
+    
+
+
+
+
+public class Tarea {
+
+    public static void main(String[] args) {
+        // Ingreso del número
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingrese un número entero: ");
+        int numero = sc.nextInt();
+
+        // Determinación si el número es par o impar
+        if (numero % 2 == 0) {
+            System.out.println(numero + " es un número par.");
+        } else {
+            System.out.println(numero + " es un número impar.");
+        }
+    }
+}
+
