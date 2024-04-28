@@ -1,0 +1,29 @@
+package com.mycompany.meodio;
+import java.util.Scanner;
+/**
+ *
+ * @author LA FE
+ */
+public class MeOdio {
+    public static void main(String[] args) {
+        // Ingreso del ángulo en radianes
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingrese el ángulo en radianes: ");
+        double radianes = sc.nextDouble();
+
+        // Conversión a grados
+        double grados = radianes * (180.0 / Math.PI);
+
+        // Conversión de grados a grados enteros, minutos y segundos
+        int gradosEnteros = (int) grados;
+        double minutosDecimales = (grados - gradosEnteros) * 60.0;
+        int minutos = (int) minutosDecimales;
+        double segundosDecimales = (minutosDecimales - minutos) * 60.0;
+        int segundos = (int) Math.round(segundosDecimales);
+
+        // Impresión del resultado
+        System.out.println("Equivalente en grados, minutos y segundos sexagesimales:");
+        System.out.printf("%d° %d' %d''", gradosEnteros, minutos, segundos);
+    }
+}
+ 
