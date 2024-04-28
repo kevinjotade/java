@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+/**
+ *
+ * @author LA FE
+ */
+    
+
+public class Tarea {
+
+    public static void main(String[] args) {
+        // Ingreso del valor de n
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingrese el valor de n: ");
+        int n = sc.nextInt();
+
+        // Cálculo de la suma de cuadrados
+        long sumaCuadrados = (long) (n * (n + 1) * (2 * n + 1)) / 6;
+
+        // Impresión del resultado
+        System.out.println("La suma de cuadrados de los " + n + " primeros números naturales es: " + sumaCuadrados);
+    }
+}
